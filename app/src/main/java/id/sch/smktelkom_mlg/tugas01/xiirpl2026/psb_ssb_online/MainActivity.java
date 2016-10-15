@@ -8,6 +8,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     RadioButton rbLK,rbPR;
     RadioGroup rgStatus;
     CheckBox cbGK, cbDef, cbMid, cbSt;
+    Spinner spClub;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         cbDef = (CheckBox) findViewById(R.id.checkBoxDef);
         cbMid = (CheckBox) findViewById(R.id.checkBoxMid);
         cbSt = (CheckBox) findViewById(R.id.checkBoxSt);
+        spClub = (Spinner) findViewById(R.id.spinnerClub);
         tvHasil = (TextView) findViewById(R.id.textViewHasil);
 
         bDaftar.setOnClickListener(new View.OnClickListener() {
@@ -76,7 +79,8 @@ public class MainActivity extends AppCompatActivity {
 
             if(hasil.length()==startlen) hasil+= "Tidak ada Pilihan";
 
-            tvHasil.setText("Nama Lengkap "+" : "+ nama + "\n" +"Tahun Kelahiran "+" : "+ tahun + "\n" +"Jenis Kelamin "+" : "+ genderresult +"\n" +"Alamat "+" : "+ alamat+"\n" + hasil);
+
+            tvHasil.setText("Nama Lengkap "+" : "+ nama + "\n" +"Tahun Kelahiran "+" : "+ tahun + "\n" +"Jenis Kelamin "+" : "+ genderresult +"\n" +"Alamat "+" : "+ alamat+"\n" + hasil +"Club Yang Dipilih "+" : "+ spClub.getSelectedItem().toString());
         }
     }
 

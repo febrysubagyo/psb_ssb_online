@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="club">
+        <item>Arema Academy</item>
+        <item>Arsenal Academy</item>
+        <item>F.C.Barcelona Academy</item>
+        <item>Real Madrid C.F Academy</item>
+    </string-array>
+</resources>
