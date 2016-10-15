@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     Button bDaftar;
     RadioButton rbLK,rbPR;
     RadioGroup rgStatus;
+    CheckBox cbGK, cbDef, cbMid, cbSt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,10 @@ public class MainActivity extends AppCompatActivity {
         rbLK = (RadioButton) findViewById(R.id.radioButtonLK);
         rbPR = (RadioButton) findViewById(R.id.radioButtonPR);
         rgStatus = (RadioGroup) findViewById(R.id.RadioGroupStatus);
+        cbGK = (CheckBox) findViewById(R.id.checkBoxGK);
+        cbDef = (CheckBox) findViewById(R.id.checkBoxDef);
+        cbMid = (CheckBox) findViewById(R.id.checkBoxMid);
+        cbSt = (CheckBox) findViewById(R.id.checkBoxSt);
         tvHasil = (TextView) findViewById(R.id.textViewHasil);
 
         bDaftar.setOnClickListener(new View.OnClickListener() {
@@ -61,7 +67,16 @@ public class MainActivity extends AppCompatActivity {
                 genderresult = rbPR.getText().toString();
             }*/
 
-            tvHasil.setText("Nama Lengkap "+" : "+ nama + "\n" +"Tahun Kelahiran "+" : "+ tahun + "\n" +"Jenis Kelamin "+" : "+ genderresult +"\n" +"Alamat "+" : "+ alamat);
+            String hasil = "Posisi : \n";
+            int startlen = hasil.length();
+            if(cbGK.isChecked())  hasil+=cbGK.getText()+"\n";
+            if(cbDef.isChecked()) hasil+=cbDef.getText()+"\n";
+            if(cbMid.isChecked()) hasil+=cbMid.getText()+"\n";
+            if(cbSt.isChecked())  hasil+=cbSt.getText()+"\n";
+
+            if(hasil.length()==startlen) hasil+= "Tidak ada Pilihan";
+
+            tvHasil.setText("Nama Lengkap "+" : "+ nama + "\n" +"Tahun Kelahiran "+" : "+ tahun + "\n" +"Jenis Kelamin "+" : "+ genderresult +"\n" +"Alamat "+" : "+ alamat+"\n" + hasil);
         }
     }
 

@@ -56,6 +56,34 @@
         android:hint="Alamat"
         android:id="@+id/editTextAlamat" />
 
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Goalkeeper"
+        android:id="@+id/checkBoxGK"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Defender"
+        android:id="@+id/checkBoxDef"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Midfielder"
+        android:id="@+id/checkBoxMid"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Striker"
+        android:checked="false"
+        android:id="@+id/checkBoxSt" />
+
     <Button
         android:layout_width="354dp"
         android:layout_height="wrap_content"
