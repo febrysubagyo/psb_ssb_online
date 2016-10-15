@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -12,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
     EditText etNamaLengkap, etTahunLahir, etAlamat;
     TextView tvHasil;
     Button bDaftar;
+    RadioButton rbLK,rbPR;
+    RadioGroup rgStatus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
         etTahunLahir = (EditText) findViewById(R.id.editTextTahunLahir);
         etAlamat = (EditText) findViewById(R.id.editTextAlamat);
         bDaftar = (Button) findViewById(R.id.buttonDaftar);
+        rbLK = (RadioButton) findViewById(R.id.radioButtonLK);
+        rbPR = (RadioButton) findViewById(R.id.radioButtonPR);
+        rgStatus = (RadioGroup) findViewById(R.id.RadioGroupStatus);
         tvHasil = (TextView) findViewById(R.id.textViewHasil);
 
         bDaftar.setOnClickListener(new View.OnClickListener() {
@@ -38,7 +45,23 @@ public class MainActivity extends AppCompatActivity {
             String nama = etNamaLengkap.getText().toString();
             int tahun = Integer.parseInt(etTahunLahir.getText().toString());
             String alamat = etAlamat.getText().toString();
-            tvHasil.setText("Nama Lengkap "+" : "+ nama + "\n" +"Tahun Kelahiran "+" : "+ tahun + "\n" +"Alamat "+" : "+ alamat);
+
+            String genderresult = null;
+            if(rgStatus.getCheckedRadioButtonId()!=-1)
+            {
+                RadioButton rb = (RadioButton)
+                        findViewById(rgStatus.getCheckedRadioButtonId());
+                genderresult = rb.getText().toString();
+            }
+            /*if(rbLK.isChecked())
+            {
+                genderresult = rbLK.getText().toString();
+            }
+            else if (rbPR.isChecked()) {
+                genderresult = rbPR.getText().toString();
+            }*/
+
+            tvHasil.setText("Nama Lengkap "+" : "+ nama + "\n" +"Tahun Kelahiran "+" : "+ tahun + "\n" +"Jenis Kelamin "+" : "+ genderresult +"\n" +"Alamat "+" : "+ alamat);
         }
     }
 
