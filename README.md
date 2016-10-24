@@ -13,10 +13,11 @@ Aplikasi ini terdiri dari :
  Dalam aplikasi ini. Peserta mendaftar kan diri sesuai ketentuan yang telah ada di dalam aplikasi.
 
 # Gambar Screenshoot :
-(https://cloud.githubusercontent.com/assets/22725686/19632809/a9fd37c0-99d4-11e6-9ea3-c6e9d3013478.jpg)
-(https://cloud.githubusercontent.com/assets/22725686/19632811/aa002c8c-99d4-11e6-8354-c0186cfb0a90.jpg)
-(https://cloud.githubusercontent.com/assets/22725686/19632810/a9ff1e64-99d4-11e6-9857-97fab6346132.jpg)
-(https://cloud.githubusercontent.com/assets/22725686/19632812/aa05e88e-99d4-11e6-9acc-86ab465735cf.jpg)
+![ssb1](https://cloud.githubusercontent.com/assets/22725686/19632809/a9fd37c0-99d4-11e6-9ea3-c6e9d3013478.jpg)
+![ssb2](https://cloud.githubusercontent.com/assets/22725686/19632811/aa002c8c-99d4-11e6-8354-c0186cfb0a90.jpg)
+![ssb3](https://cloud.githubusercontent.com/assets/22725686/19632810/a9ff1e64-99d4-11e6-9857-97fab6346132.jpg)
+![ssb4](https://cloud.githubusercontent.com/assets/22725686/19632812/aa05e88e-99d4-11e6-9acc-86ab465735cf.jpg)
+
 
 
 # Link APK :
